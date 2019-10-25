@@ -77,7 +77,7 @@
        even if the device is not in portait mode. That is why we need to recalculate them manually
        based on the current orientation value
        */
-      hitPoint = FBInvertPointForApplication(hitPoint, self.application.frame.size, self.application.interfaceOrientation);
+      hitPoint = FBInvertPointForApplication(hitPoint, [[UIScreen mainScreen] bounds].size, self.application.interfaceOrientation);
     }
   } else {
     // The offset relative to the element is defined
